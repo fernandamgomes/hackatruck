@@ -1,0 +1,333 @@
+[
+    {
+        "id": "8f48b9c4705f3da0",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c16a206e34c15494",
+        "type": "http in",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "url": "/salvarFernanda",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "fef775f6eee44eac"
+            ]
+        ]
+    },
+    {
+        "id": "a3798009771705a8",
+        "type": "http response",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "fef775f6eee44eac",
+        "type": "cloudantplus out",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "cloudant": "3d150ac1bb8fa57b",
+        "database": "fernandacrud",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 480,
+        "y": 280,
+        "wires": [
+            [
+                "a3798009771705a8",
+                "1b2341bf3af9daa0"
+            ]
+        ]
+    },
+    {
+        "id": "1b2341bf3af9daa0",
+        "type": "debug",
+        "z": "8f48b9c4705f3da0",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "814180899541385d",
+        "type": "http in",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "url": "/salvarFernandaPost",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 500,
+        "wires": [
+            [
+                "ea81fdf285185c5d"
+            ]
+        ]
+    },
+    {
+        "id": "aef32eec3500e112",
+        "type": "http response",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "ea81fdf285185c5d",
+        "type": "cloudantplus out",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "cloudant": "3d150ac1bb8fa57b",
+        "database": "fernandacrud",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 480,
+        "y": 500,
+        "wires": [
+            [
+                "aef32eec3500e112",
+                "1ca39e3172a3e309"
+            ]
+        ]
+    },
+    {
+        "id": "1ca39e3172a3e309",
+        "type": "debug",
+        "z": "8f48b9c4705f3da0",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1530cc9ca5a91660",
+        "type": "http in",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "url": "/apagarFernanda",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 760,
+        "wires": [
+            [
+                "6a7a43baefdce9a1"
+            ]
+        ]
+    },
+    {
+        "id": "c8c208e6db571487",
+        "type": "http response",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 690,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "6a7a43baefdce9a1",
+        "type": "cloudantplus out",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "cloudant": "3d150ac1bb8fa57b",
+        "database": "fernandacrud",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "delete",
+        "x": 480,
+        "y": 760,
+        "wires": [
+            [
+                "c8c208e6db571487",
+                "a15ef356e937e555"
+            ]
+        ]
+    },
+    {
+        "id": "a15ef356e937e555",
+        "type": "debug",
+        "z": "8f48b9c4705f3da0",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "ca6f2ba3b403c499",
+        "type": "http in",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "url": "/listarFernanda",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 980,
+        "wires": [
+            [
+                "2f9c0f5b120b7c30"
+            ]
+        ]
+    },
+    {
+        "id": "0009cb9e35fac6b9",
+        "type": "http response",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "3d443f30c5da348b",
+        "type": "debug",
+        "z": "8f48b9c4705f3da0",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "5c976ddcbabde0cb",
+        "type": "http in",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "url": "/updateFernanda",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 1280,
+        "wires": [
+            [
+                "583abb737f4b0cf3"
+            ]
+        ]
+    },
+    {
+        "id": "9069cbba60f04a55",
+        "type": "http response",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "583abb737f4b0cf3",
+        "type": "cloudantplus out",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "cloudant": "3d150ac1bb8fa57b",
+        "database": "fernandacrud",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 460,
+        "y": 1280,
+        "wires": [
+            [
+                "9069cbba60f04a55",
+                "0a90896e8ebd426c"
+            ]
+        ]
+    },
+    {
+        "id": "0a90896e8ebd426c",
+        "type": "debug",
+        "z": "8f48b9c4705f3da0",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "2f9c0f5b120b7c30",
+        "type": "cloudantplus in",
+        "z": "8f48b9c4705f3da0",
+        "name": "",
+        "cloudant": "3d150ac1bb8fa57b",
+        "database": "fernandacrud",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 460,
+        "y": 980,
+        "wires": [
+            [
+                "3d443f30c5da348b",
+                "0009cb9e35fac6b9"
+            ]
+        ]
+    },
+    {
+        "id": "3d150ac1bb8fa57b",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-1oyyl44w0ka2aw9z3fvb53wag6o79wi8boxf0xsbnpr:6c078caec78a17bbd953a16fff300224@bbd3c0ee-d0c8-455b-bbd3-8d6d996c2c0a-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "",
+        "useapikey": true
+    }
+]
